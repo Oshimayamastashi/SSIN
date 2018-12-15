@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<FlowPane prefHeight="790.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Maincontroller">
+   <children>
+      <FlowPane prefHeight="500.0" prefWidth="1005.0">
+         <children>
+            <Pane prefHeight="500.0" prefWidth="310.0">
+               <children>
+                  <Pane prefHeight="310.0" prefWidth="310.0" styleClass="image-view-wrapper">
+                     <children>
+                        <ImageView fx:id="searchImage" fitHeight="300.0" fitWidth="300.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <Button layoutX="15.0" layoutY="355.0" mnemonicParsing="false" onAction="#openArgWindow" prefHeight="25.0" prefWidth="280.0" text="ARGUMENT" />
+                  <Button layoutX="15.0" layoutY="320.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="280.0" text="SEARCH" />
+                  <Button layoutX="14.0" layoutY="390.0" mnemonicParsing="false" onAction="#index" prefHeight="25.0" prefWidth="280.0" text="INDEX" />
+               </children>
+            </Pane>
+            <Separator minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="5.0" />
+            <Pane prefHeight="500.0" prefWidth="690.0">
+               <children>
+                  <ImageView fx:id="BigImage" fitHeight="500.0" fitWidth="500.0" layoutX="100.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </FlowPane>
+      <Separator minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="1006.0" />
+      <FlowPane prefHeight="275.0" prefWidth="1006.0">
+         <children>
+            <Pane prefHeight="25.0" prefWidth="1006.0">
+               <children>
+                  <Button fx:id="btn_pageleft" mnemonicParsing="false" onAction="#viewleft" prefHeight="25.0" prefWidth="454.0" text="&lt;&lt;" />
+                  <Button fx:id="btn_pageright" layoutX="454.0" mnemonicParsing="false" onAction="#viewright" prefHeight="25.0" prefWidth="454.0" text="&gt;&gt;" />
+                  <ComboBox fx:id="cbox_pagenum" layoutX="908.0" onAction="#printpage" prefHeight="25.0" prefWidth="110.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="270.0" prefWidth="1016.0">
+               <children>
+                  <ScrollPane prefHeight="275.0" prefWidth="1016.0">
+                     <content>
+                        <HBox fx:id="hbox_result" prefHeight="250.0" prefWidth="1006.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+         </children>
+      </FlowPane>
+   </children>
+</FlowPane>
